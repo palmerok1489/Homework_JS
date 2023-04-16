@@ -11,15 +11,16 @@ if (result){
 let budgetMonth = 12875.3;
 console.log(budgetMonth - 3129.8);
 let purpose = 12824.4 ;
-console.log(Math.ceil (purpose));
-let budgetDay = 19.34;
+console.log(Math.ceil(purpose));
+let budgetDay = -1;
 console.log(Math.floor(budgetDay));
 if (budgetDay > 100000){
     console.log("У вас высокиий уровень дохода");
 } else if (budgetDay >= 30000){
     console.log("У вас средний уровень дохода");
-} else if (budgetDay <= 30000 ) {
+} else if (budgetDay <= 30000 && budgetDay >=0 ) {
     console.log("К сожалению у вас уровень дохода ниже среднего");
-} else {
+} else if (budgetDay < 0) {
     console.log("что то пошло не так");
 }
+
