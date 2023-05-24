@@ -1,27 +1,20 @@
+"use strict";
 
 
-let op;
 
-function func() {
-    let result;
-    const num1 = Number(document.getElementById("num1").value);
-    const num2 = Number(document.getElementById("num2").value);
+let userName = prompt('Введите логин','');
 
-    switch (op) {
-        case '+':
-            result = num1 + num2;
-            break;
-        case '-':
-            result = num1 - num2;
-            break;
-        case '*':
-            result = num1 * num2;
-            break;
-        case '/':
-            result = num1 / num2;
-            break;
+  if (userName === 'админ') {
+    let pass = prompt ('введите пароль','')
+      if (pass === 'я главный') {
+        alert ('здравствуйте');
+      } else if (pass === '' || pass === null) {
+        alert ('отменено');
+      } else {
+        alert ('не верный пароль');
+      }
+    } else if (userName === '' || userName === null){
+      alert ('отменено');
+    } else {
+      alert ('я вас не знаю');
     }
-    document.getElementById("result").innerHTML = result;
-}
-
-
